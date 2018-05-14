@@ -52,38 +52,7 @@ public class Client {
                     DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
 
                     Helper.sendResponse(socket, packet);
-                    /*
-                    byte[] data = Serialization.serializeClass(packet);
-                    if (data != null) {
-                        outputStream.writeInt(data.length);
-                        outputStream.write(data);
-                        outputStream.flush();
-                    } else {
-                        inputStream.close();
-                        outputStream.close();
-                        socket.close();
-                        continue;
-                    }
-                    */
-
                     IPacket response = Helper.getRequest(socket);
-
-                    /*
-                    IPacket response;
-                    while (true) {
-                        try {
-                            int length = inputStream.readInt();
-                            if (length > 0) {
-                                byte[] message = new byte[length];
-                                inputStream.readFully(message);
-                                response = (IPacket) Serialization.deserializeClass(message);
-                                break;
-                            }
-                        } catch (IOException exception) {
-
-                        }
-                    }
-                    */
 
                     if (response != null) {
                         ICommand responseCommand = CommandFactory.createCommand(response);

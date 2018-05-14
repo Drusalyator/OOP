@@ -23,21 +23,21 @@ public class Client {
         boolean work = true;
 
         try {
+            System.out.println(getHelp());
             BufferedReader keyboardReader = new BufferedReader(new InputStreamReader(System.in));
-
             String userName;
-            System.out.print(" > Input your name : ");
+
             while (true) {
+                System.out.print(" > Input your name : ");
                 userName = keyboardReader.readLine();
                 if (userName != null && !Objects.equals(userName, "")) break;
             }
-
-            System.out.print(" > Type your commands: ");
 
             String command;
 
             while (work) {
                 try {
+                    System.out.print(" > Type your commands: ");
                     IPacket packet;
                     command = keyboardReader.readLine();
                     try {
@@ -73,13 +73,15 @@ public class Client {
                                 break;
                             }
                         } catch (IOException exception) {
-                            continue;
+
                         }
                     }
 
-                    ICommand command1 = CommandFactory.createCommand(response);
-                    command1.execute();
-                    System.out.println(response.getClass().getName());
+                    if (response != null) {
+                        ICommand responseCommand = CommandFactory.createCommand(response);
+                        responseCommand.execute();
+                        System.out.println(response.getClass().getName());
+                    } else System.out.println(" > Response was not get");
 
                     inputStream.close();
                     outputStream.close();
@@ -95,6 +97,12 @@ public class Client {
     }
 
     private String getHelp() {
-        return "> Welcome and help will be here";
+        return " > Welcome to client\n" +
+                "   Commands: add\n" +
+                "             clone localPath serverPath [flags]\n" +
+                "             update\n" +
+                "             commit\n" +
+                "             revert [version [flag]]\n" +
+                "             log\n";
     }
 }

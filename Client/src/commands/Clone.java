@@ -1,5 +1,7 @@
 package commands;
 
+import commandFactory.CommandFactory;
+import fileWorker.Md5Executor;
 import packet.ClonePacket;
 import packet.FilePacket;
 import packet.IPacket;
@@ -25,49 +27,47 @@ public class Clone implements ICommand{
         if (!repositories.isDirectory()) repositories.mkdir();
         Properties userConfig = new Properties();
         userConfig.setProperty("ServerRep", clonePacket.getRepoName());
-        if (clonePacket.getFlag() != null) {
+        String pathToFile;
+        if (clonePacket.getFlag() != null)
             switch (clonePacket.getFlag()) {
                 case ".":
-                    String pathToRepo = pathToRepositories + "//";
+                    pathToFile = pathToRepositories;
                     File[] filesInRepo = new File(pathToRepositories).listFiles();
                     if (filesInRepo != null)
                         for (File file : filesInRepo) file.delete();
-                    for (FilePacket filePacket: clonePacket.getFiles())
-                        try {
-                            writeFile(pathToRepo, filePacket);
-                        } catch (IOException exception) {
-                            System.out.println(" > File " + filePacket.getFileName() + " was not write");
-                        }
                     userConfig.setProperty("LocalRep", pathToRepositories);
                     break;
-                default: System.out.println(" > Unsupported flag");
+                default:
+                    System.out.println(" > Unsupported flag");
+                    return;
             }
-        } else {
+        else {
             String pathToNewRepo = pathToRepositories + "//" + clonePacket.getRepoName();
             if (!new File(pathToNewRepo).mkdir()) {
                 File[] filesInRepo = new File(pathToNewRepo).listFiles();
                 if (filesInRepo != null)
                     for (File file : filesInRepo) file.delete();
             }
-            for (FilePacket filePacket: clonePacket.getFiles()) {
-                try {
-                    writeFile(pathToNewRepo + "//", filePacket);
-                } catch (IOException exception) {
-                    System.out.println(" > File " + filePacket.getFileName() + " was not write");
-                }
-            }
+            pathToFile = pathToNewRepo;
             userConfig.setProperty("LocalRep", pathToRepositories + "//" + clonePacket.getRepoName());
         }
-        try {
-            userConfig.storeToXML(new FileOutputStream("user.conf"), null);
-        } catch (IOException exception) {
-            System.out.println(" > Cannot save current repository");
-        }
+        Properties repConfig = new Properties();
+        for (FilePacket filePacket: clonePacket.getFiles())
+            try {
+                writeFile(pathToFile, filePacket);
+                Md5Executor md5Executor = new Md5Executor();
+                String currentPath = pathToFile + "//" + filePacket.getFileName();
+                String hash = md5Executor.process(new File(currentPath));
+                repConfig.setProperty(filePacket.getFileName(), hash);
+            } catch (IOException exception) {
+                System.out.println(" > File " + filePacket.getFileName() + " was not write");
+            }
+        CommandFactory.storeConfigFile(repConfig, pathToFile + "//rep.conf");
+        CommandFactory.storeConfigFile(userConfig, "user.conf");
     }
 
     private void writeFile(String path, FilePacket file) throws IOException{
-        FileOutputStream fileOutputStream = new FileOutputStream(path + file.getFileName());
+        FileOutputStream fileOutputStream = new FileOutputStream(path + "//" + file.getFileName());
         fileOutputStream.write(file.getFileData());
     }
-
 }

@@ -1,5 +1,6 @@
 package utils;
 
+import fileWorker.Md5Executor;
 import packet.FilePacket;
 import packet.IPacket;
 import serialization.Serialization;
@@ -36,11 +37,13 @@ public class Helper {
     public static FilePacket[] getFilePacket(File[] files) throws IOException {
         FilePacket[] filePackets = new FilePacket[files.length];
         int i = 0;
+        Md5Executor md5Executor = new Md5Executor();
         for (File file : files) {
             byte[] data = new byte[(int) file.length()];
             FileInputStream fileInputStream = new FileInputStream(file);
             fileInputStream.read(data);
-            FilePacket filePacket = new FilePacket(file.getName(), data);
+            String hash = md5Executor.process(file);
+            FilePacket filePacket = new FilePacket(file.getName(), data, hash);
             filePackets[i] = filePacket;
             i++;
         }

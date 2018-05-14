@@ -6,8 +6,6 @@ import dataProvider.FolderProvider;
 import packet.IPacket;
 import utils.Helper;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 

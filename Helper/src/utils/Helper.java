@@ -17,7 +17,6 @@ public class Helper {
             outputStream.writeInt(data.length);
             outputStream.write(data);
             outputStream.flush();
-            //outputStream.close();
         } else throw new NullPointerException();
     }
 
@@ -28,7 +27,6 @@ public class Helper {
             if (length > 0) {
                 byte[] message = new byte[length];
                 inputStream.readFully(message);
-                //inputStream.close();
                 return (IPacket) Serialization.deserializeClass(message);
             }
         }

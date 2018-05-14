@@ -5,6 +5,7 @@ import commands.ICommand;
 import packet.IPacket;
 import parser.CommandParser;
 import serialization.Serialization;
+import utils.Helper;
 
 import java.net.*;
 import java.io.*;
@@ -50,6 +51,8 @@ public class Client {
                     DataInputStream inputStream = new DataInputStream(socket.getInputStream());
                     DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
 
+                    Helper.sendResponse(socket, packet);
+                    /*
                     byte[] data = Serialization.serializeClass(packet);
                     if (data != null) {
                         outputStream.writeInt(data.length);
@@ -61,7 +64,11 @@ public class Client {
                         socket.close();
                         continue;
                     }
+                    */
 
+                    IPacket response = Helper.getRequest(socket);
+
+                    /*
                     IPacket response;
                     while (true) {
                         try {
@@ -76,11 +83,11 @@ public class Client {
 
                         }
                     }
+                    */
 
                     if (response != null) {
                         ICommand responseCommand = CommandFactory.createCommand(response);
                         responseCommand.execute();
-                        System.out.println(response.getClass().getName());
                     } else System.out.println(" > Response was not get");
 
                     inputStream.close();

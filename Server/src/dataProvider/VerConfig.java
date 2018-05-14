@@ -2,12 +2,12 @@ package dataProvider;
 
 public class VerConfig implements IConfig {
 
-    public String[] actualFiles;
+    String[] actualFiles;
 
     public VerConfig() {
     }
 
-    public VerConfig(String[] actualFiles) {
+    VerConfig(String[] actualFiles) {
         this.actualFiles = actualFiles;
     }
 }

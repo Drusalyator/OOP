@@ -36,7 +36,16 @@ public class CommandParser {
                     else return makeCommitPacket(userName);
                 case "revert":
                     if (arguments.size() > 3) throw new ParseError("Incorrect command");
-                    if (arguments.size() == 1) return new RevertPacket(userName, null, null, null);
+                    if (arguments.size() == 1) {
+                        Properties userConfig;
+                        try {
+                            userConfig = CommandFactory.loadConfigFile("user.conf");
+                        } catch (IOException exception) {
+                            throw new ParseError("Cannot load config files");
+                        }
+                        return new ClonePacket(userName, userConfig.getProperty("LocalRep"),
+                                userConfig.getProperty("ServerRep"), ".", null);
+                    }
                     else if (arguments.size() == 2)
                         try {
                             Double.parseDouble(arguments.get(1));

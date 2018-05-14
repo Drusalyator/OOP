@@ -1,4 +1,4 @@
 package dataProvider;
 
-public interface IConfig {
+interface IConfig {
 }

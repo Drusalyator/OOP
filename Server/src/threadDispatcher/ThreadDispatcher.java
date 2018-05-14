@@ -32,13 +32,13 @@ public class ThreadDispatcher {
         Thread thread = new Thread(threadedTask);
         thread.start();
         workingThread.put(thread.getId(), threadedTask.name);
-        System.out.println(workingThread);
+        //System.out.println(workingThread);
         treadMonitor.needUpdate();
     }
 
     synchronized void deleteThread(long threadId) {
         workingThread.remove(threadId);
-        System.out.println(workingThread);
+        //System.out.println(workingThread);
         treadMonitor.needUpdate();
     }
 

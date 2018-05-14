@@ -5,13 +5,13 @@ import versionSystem.IVersionSystem;
 public class RepConfig implements IConfig {
 
     private String repositoryName;
-    public double actualVersion = 0.0;
+    double actualVersion = 0.0;
     private IVersionSystem versionSystem;
 
     public RepConfig() {
     }
 
-    public RepConfig(String repositoryName, IVersionSystem versionSystem) {
+    RepConfig(String repositoryName, IVersionSystem versionSystem) {
         this.repositoryName = repositoryName;
         this.versionSystem = versionSystem;
     }
@@ -20,7 +20,7 @@ public class RepConfig implements IConfig {
         return repositoryName;
     }
 
-    public IVersionSystem getVersionSystem() {
+    IVersionSystem getVersionSystem() {
         return versionSystem;
     }
 }

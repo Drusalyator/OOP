@@ -64,6 +64,7 @@ public class Clone implements ICommand{
             }
         CommandFactory.storeConfigFile(repConfig, pathToFile + "//rep.conf");
         CommandFactory.storeConfigFile(userConfig, "user.conf");
+        System.out.println(" > Clone was success");
     }
 
     private void writeFile(String path, FilePacket file) throws IOException{

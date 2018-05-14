@@ -14,6 +14,6 @@ public class Commit implements ICommand{
 
     @Override
     public void execute() {
-        System.out.println(" >  file(s) was commit is: '" + commitPacket.getUserName());
+        System.out.println(" > File(s) was commit is: " + commitPacket.getUserName());
     }
 }

@@ -3,7 +3,7 @@ package commands;
 import packet.ErrorPacket;
 import packet.IPacket;
 
-public class Error implements ICommand{
+public class Error implements ICommand {
 
     private ErrorPacket errorPacket;
 
@@ -13,7 +13,7 @@ public class Error implements ICommand{
     }
 
     @Override
-    public void execute() {
+    public void execute(byte[] data) {
         System.out.println(" > Something wrong");
         System.out.println("   Error type: " + errorPacket.getErrorType());
         System.out.println("   Error info: " + errorPacket.getErrorInfo());

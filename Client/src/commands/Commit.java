@@ -3,7 +3,7 @@ package commands;
 import packet.CommitPacket;
 import packet.IPacket;
 
-public class Commit implements ICommand{
+public class Commit implements ICommand {
 
     private CommitPacket commitPacket;
 
@@ -13,7 +13,7 @@ public class Commit implements ICommand{
     }
 
     @Override
-    public void execute() {
+    public void execute(byte[] data) {
         System.out.println(" > File(s) was commit is: " + commitPacket.getUserName());
     }
 }

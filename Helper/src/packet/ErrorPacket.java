@@ -20,4 +20,9 @@ public class ErrorPacket implements IPacket {
     public String getErrorInfo() {
         return errorInfo;
     }
+
+    @Override
+    public int getDataLength() {
+        return 0;
+    }
 }

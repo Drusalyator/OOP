@@ -1,6 +1,7 @@
 package commands;
 
 import dataProvider.IDataProvider;
+import javafx.util.Pair;
 import packet.ErrorPacket;
 import packet.IPacket;
 
@@ -14,7 +15,7 @@ public class Error implements ICommand {
     }
 
     @Override
-    public IPacket execute(IDataProvider dataProvider) {
-        return new ErrorPacket(10, errorPacket.getErrorInfo());
+    public Pair<IPacket, byte[]> execute(IDataProvider dataProvider, byte[] data) {
+        return new Pair<>(new ErrorPacket(10, errorPacket.getErrorInfo()), null);
     }
 }

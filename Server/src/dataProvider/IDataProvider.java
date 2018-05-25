@@ -1,6 +1,5 @@
 package dataProvider;
 
-import packet.FilePacket;
 import versionSystem.IVersionSystem;
 
 import java.io.File;
@@ -10,7 +9,7 @@ public interface IDataProvider {
 
     void createRepository(String repositoryName, IVersionSystem versionSystem) throws ProviderException;
 
-    void addNewVersion(String repName, FilePacket[] files, String[] actualFiles) throws ProviderException;
+    void addNewVersion(String repName, byte[] files, String[] actualFiles) throws ProviderException;
 
     File[] getActualVersion(String repName) throws ProviderException;
 

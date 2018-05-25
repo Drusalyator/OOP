@@ -3,6 +3,7 @@ package threadDispatcher;
 import commandFactory.CommandFactory;
 import commands.ICommand;
 import dataProvider.FolderProvider;
+import javafx.util.Pair;
 import packet.IPacket;
 import utils.Helper;
 
@@ -21,9 +22,9 @@ public class ClientWorker extends ThreadedTask {
     @Override
     public void doWork() {
         try {
-            IPacket packet = Helper.getRequest(clientSocket);
-            ICommand command = CommandFactory.createCommand(packet);
-            IPacket response = command.execute(new FolderProvider());
+            Pair<IPacket, byte[]> request = Helper.getRequest(clientSocket);
+            ICommand command = CommandFactory.createCommand(request.getKey());
+            Pair<IPacket, byte[]> response = command.execute(new FolderProvider(), request.getValue());
             Helper.sendResponse(clientSocket, response);
             System.out.println(String.format("> Client (%s, %s) disconnected",
                     clientSocket.getInetAddress().toString().substring(1),

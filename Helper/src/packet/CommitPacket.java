@@ -3,15 +3,15 @@ package packet;
 public class CommitPacket implements IPacket {
 
     private String userName;
-    private FilePacket[] files;
+    private int dataLength;
     private String[] actualFiles;
 
     public CommitPacket() {
     }
 
-    public CommitPacket(String userName, FilePacket[] files, String[] actualFiles) {
+    public CommitPacket(String userName, int dataLength, String[] actualFiles) {
         this.userName = userName;
-        this.files = files;
+        this.dataLength = dataLength;
         this.actualFiles = actualFiles;
     }
 
@@ -19,8 +19,9 @@ public class CommitPacket implements IPacket {
         return userName;
     }
 
-    public FilePacket[] getFiles() {
-        return files;
+    @Override
+    public int getDataLength() {
+        return dataLength;
     }
 
     public String[] getActualFiles() {

@@ -2,10 +2,10 @@ package commands;
 
 import commandFactory.UserConfig;
 import dataProvider.IDataProvider;
+import javafx.util.Pair;
 import logger.ILogger;
 import logger.Logger;
 import packet.ErrorPacket;
-import packet.FilePacket;
 import packet.IPacket;
 import packet.UpdatePacket;
 import utils.Helper;
@@ -22,20 +22,21 @@ public class Update implements ICommand{
     }
 
     @Override
-    public IPacket execute(IDataProvider dataProvider) {
-        if (updatePacket == null) return new ErrorPacket(1, "BED. Received a bad package");
+    public Pair<IPacket, byte[]> execute(IDataProvider dataProvider, byte[] data) {
+        if (updatePacket == null) return new Pair<>(new ErrorPacket(1, "BED. Received a bad package"), null);
         UserConfig userConfig = UserConfig.getInstance();
         String userRep = userConfig.getUserRepository(updatePacket.getUserName());
         if (userConfig.getUserRepository(updatePacket.getUserName()) != null) {
             try {
                 File[] files = dataProvider.getActualVersion(userRep);
-                FilePacket[] filePackets = Helper.getFilePacket(files);
+                byte[] fileData = Helper.makeArchive(files);
                 ILogger logger = new Logger(userRep);
                 logger.writeNewLog(updatePacket.getUserName() + ": add");
-                return new UpdatePacket(updatePacket.getUserName(), filePackets);
+                return new Pair<>(new UpdatePacket(updatePacket.getUserName(), fileData.length), fileData);
             } catch (Exception exception) {
-                return new ErrorPacket(6, "Cannot execute command 'Update': " + exception.getLocalizedMessage());
+                return new Pair<>(new ErrorPacket
+                        (6, "Cannot execute command 'Update': " + exception.getLocalizedMessage()), null);
             }
-        } else return new ErrorPacket(5, "Make command clone at first");
+        } else return new Pair<>(new ErrorPacket(5, "Make command clone at first"), null);
     }
 }

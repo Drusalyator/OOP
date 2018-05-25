@@ -2,6 +2,7 @@ package commands;
 
 import commandFactory.UserConfig;
 import dataProvider.IDataProvider;
+import javafx.util.Pair;
 import logger.ILogger;
 import logger.Logger;
 import packet.ErrorPacket;
@@ -17,8 +18,8 @@ public class Log implements ICommand{
     }
 
     @Override
-    public IPacket execute (IDataProvider dataProvider) {
-        if (logPacket == null) return new ErrorPacket(1, "BED. Received a bad package");
+    public Pair<IPacket, byte[]> execute (IDataProvider dataProvider, byte[] data) {
+        if (logPacket == null) return new Pair<>(new ErrorPacket(1, "BED. Received a bad package"), null);
         UserConfig userConfig = UserConfig.getInstance();
         String userRep = userConfig.getUserRepository(logPacket.getUserName());
         if (userConfig.getUserRepository(logPacket.getUserName()) != null) {
@@ -26,10 +27,11 @@ public class Log implements ICommand{
                 ILogger logger = new Logger(userRep);
                 logger.writeNewLog(logPacket.getUserName() + ": log");
                 String log = logger.getLog();
-                return new LogPacket(logPacket.getUserName(), log);
+                return new Pair<>(new LogPacket(logPacket.getUserName(), log), null);
             } catch (Exception exception) {
-                return new ErrorPacket(11, "Cannot execute command 'Clone': " + exception.getLocalizedMessage());
+                return new Pair<>(new ErrorPacket(
+                        11, "Cannot execute command 'Clone': " + exception.getLocalizedMessage()), null);
             }
-        } else return new ErrorPacket(5, "Make command clone at first");
+        } else return new Pair<>(new ErrorPacket(5, "Make command clone at first"), null);
     }
 }

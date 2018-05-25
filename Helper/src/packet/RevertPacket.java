@@ -5,16 +5,16 @@ public class RevertPacket implements IPacket{
     private String userName;
     private String version;
     private String flag;
-    private FilePacket[] files;
+    private int dataLength;
 
     public RevertPacket() {
     }
 
-    public RevertPacket(String userName, String version, String flag, FilePacket[] files) {
+    public RevertPacket(String userName, String version, String flag, int dataLength) {
         this.userName = userName;
         this.version = version;
         this.flag = flag;
-        this.files = files;
+        this.dataLength = dataLength;
     }
 
     public String getUserName() {
@@ -29,7 +29,8 @@ public class RevertPacket implements IPacket{
         return flag;
     }
 
-    public FilePacket[] getFiles() {
-        return files;
+    @Override
+    public int getDataLength() {
+        return dataLength;
     }
 }

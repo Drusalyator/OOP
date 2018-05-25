@@ -3,7 +3,7 @@ package commands;
 import packet.AddPacket;
 import packet.IPacket;
 
-public class Add implements ICommand{
+public class Add implements ICommand {
 
     private AddPacket addPacket;
 
@@ -13,7 +13,7 @@ public class Add implements ICommand{
     }
 
     @Override
-    public void execute() {
+    public void execute(byte[] data) {
         System.out.println(" > Repository with name : " + addPacket.getRepositoryName() + " was created");
     }
 

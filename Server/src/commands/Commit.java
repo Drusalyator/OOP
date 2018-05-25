@@ -2,11 +2,11 @@ package commands;
 
 import commandFactory.UserConfig;
 import dataProvider.IDataProvider;
+import javafx.util.Pair;
 import logger.ILogger;
 import logger.Logger;
 import packet.CommitPacket;
 import packet.ErrorPacket;
-import packet.FilePacket;
 import packet.IPacket;
 
 public class Commit implements ICommand {
@@ -19,22 +19,22 @@ public class Commit implements ICommand {
     }
 
     @Override
-    public IPacket execute(IDataProvider dataProvider) {
-        if (commitPacket == null) return new ErrorPacket(1, "BED. Received a bad package");
+    public Pair<IPacket, byte[]> execute(IDataProvider dataProvider, byte[] data) {
+        if (commitPacket == null) return new Pair<>(new ErrorPacket(1, "BED. Received a bad package"), null);
         UserConfig userConfig = UserConfig.getInstance();
         String userRep = userConfig.getUserRepository(commitPacket.getUserName());
         if (userConfig.getUserRepository(commitPacket.getUserName()) != null) {
             try {
                 if (commitPacket.getActualFiles() != null) {
-                    dataProvider.addNewVersion(userRep, commitPacket.getFiles(), commitPacket.getActualFiles());
+                    dataProvider.addNewVersion(userRep, data, commitPacket.getActualFiles());
                     ILogger logger = new Logger(userRep);
-                    logger.writeNewLog(commitPacket.getUserName() + ": commit " +
-                            commitPacket.getFiles().length + " files");
-                    return new CommitPacket(commitPacket.getUserName(), new FilePacket[0], commitPacket.getActualFiles());
-                } else return new ErrorPacket(12, "No actual files in commit packet");
+                    logger.writeNewLog(commitPacket.getUserName() + ": commit");
+                    return new Pair<>(new CommitPacket(commitPacket.getUserName(), 0, commitPacket.getActualFiles()), null);
+                } else return new Pair<>(new ErrorPacket(12, "No actual files in commit packet"), null);
             } catch (Exception exception) {
-                return new ErrorPacket(13, "Cannot execute command 'Commit': " + exception.getLocalizedMessage());
+                return new Pair<>(new ErrorPacket(
+                        13, "Cannot execute command 'Commit': " + exception.getLocalizedMessage()), null);
             }
-        } else return new ErrorPacket(5, "Make command clone at first");
+        } else return new Pair<>(new ErrorPacket(5, "Make command clone at first"), null);
     }
 }

@@ -6,17 +6,17 @@ public class ClonePacket implements IPacket {
     private String path;
     private String repoName;
     private String flag;
-    private FilePacket[] files;
+    private int dataLength;
 
     public ClonePacket() {
     }
 
-    public ClonePacket(String userName, String path, String repoName, String flag, FilePacket[] files) {
+    public ClonePacket(String userName, String path, String repoName, String flag, int dataLength) {
         this.userName = userName;
         this.path = path;
         this.repoName = repoName;
         this.flag = flag;
-        this.files = files;
+        this.dataLength = dataLength;
     }
 
     public String getUserName() {
@@ -35,7 +35,8 @@ public class ClonePacket implements IPacket {
         return flag;
     }
 
-    public FilePacket[] getFiles() {
-        return files;
+    @Override
+    public int getDataLength() {
+        return dataLength;
     }
 }

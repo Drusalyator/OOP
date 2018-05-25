@@ -2,58 +2,150 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7e8d955-a8a8-4bf9-93c9-107bd0d9bbe0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/Helper/fileWorker/FileWorker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/rep/pisos/Task.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/rep/pisos/Task3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/rep/pisos/rep.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/rep/pisos/server.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/rep/type/browser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/rep/type/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/rep/type/rep.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/user.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Helper/src/fileWorker/FileWorker.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Helper/fileWorker/FileWorker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Server/commands/ICommand$CommandError.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repositories/pisos/1.0/Task.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repositories/pisos/1.0/Task3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repositories/pisos/1.0/version.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repositories/pisos/1.1/Task3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repositories/pisos/1.1/server.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repositories/pisos/1.1/version.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repositories/pisos/pisos.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repositories/pisos/pisos.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/users.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/.idea/description.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/client/Client.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/main/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/packet/AddPacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/packet/ClonePacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/packet/CommitPacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/packet/ErrorPacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/packet/FilePacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/packet/IPacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/packet/LogPacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/packet/RevertPacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/packet/UpdatePacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/parser/CommandParser$ParseError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/parser/CommandParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/serialization/Serialization$Coder$FieldReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/serialization/Serialization$Coder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/serialization/Serialization$Decoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/serialization/Serialization$IdentityKeyWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/ClientOOP/serialization/Serialization.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/Helper/packet/FilePacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/commandFactory/CommandFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/commandFactory/UserConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/commands/Add.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/commands/Clone.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/commands/Commit.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/commands/Error.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/commands/ICommand$CommandError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/commands/ICommand.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/commands/Log.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/commands/Revert.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/commands/Update.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/dataProvider/FolderProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/dataProvider/IConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/dataProvider/IDataProvider$ProviderException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/dataProvider/IDataProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/dataProvider/RepConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/dataProvider/VerConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/logger/ILogger.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/logger/Logger.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/main/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/packet/AddPacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/packet/ClonePacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/packet/CommitPacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/packet/ErrorPacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/packet/FilePacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/packet/IPacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/packet/LogPacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/packet/RevertPacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/packet/UpdatePacket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/serialization/Serialization$Coder$FieldReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/serialization/Serialization$Coder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/serialization/Serialization$Decoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/serialization/Serialization$IdentityKeyWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/serialization/Serialization.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/threadDispatcher/ClientWorker.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/threadDispatcher/ThreadDispatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/threadDispatcher/ThreadMonitor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/threadDispatcher/ThreadedTask.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/utils/Helper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/versionSystem/IVersionSystem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/versionSystem/StandardVersion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/out/production/OOP/webServer/Server.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Helper/src/packet/FilePacket.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Helper/packet/FilePacket.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Client/client/Client.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/client/Client.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Client/commandFactory/CommandFactory.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/commandFactory/CommandFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Client/commands/Add.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/commands/Add.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Client/commands/Clone.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/commands/Clone.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Client/commands/Commit.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/commands/Commit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Client/commands/Error.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/commands/Error.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Client/commands/ICommand.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/commands/ICommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Client/commands/Log.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/commands/Log.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Client/commands/Revert.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/commands/Revert.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Client/commands/Update.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/commands/Update.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Client/parser/CommandParser$ParseError.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/parser/CommandParser$ParseError.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Client/parser/CommandParser.class" afterPath="$PROJECT_DIR$/../Client/out/production/Client/parser/CommandParser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Helper/packet/AddPacket.class" afterPath="$PROJECT_DIR$/../Client/out/production/Helper/packet/AddPacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Helper/packet/ClonePacket.class" afterPath="$PROJECT_DIR$/../Client/out/production/Helper/packet/ClonePacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Helper/packet/CommitPacket.class" afterPath="$PROJECT_DIR$/../Client/out/production/Helper/packet/CommitPacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Helper/packet/ErrorPacket.class" afterPath="$PROJECT_DIR$/../Client/out/production/Helper/packet/ErrorPacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Helper/packet/IPacket.class" afterPath="$PROJECT_DIR$/../Client/out/production/Helper/packet/IPacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Helper/packet/LogPacket.class" afterPath="$PROJECT_DIR$/../Client/out/production/Helper/packet/LogPacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Helper/packet/RevertPacket.class" afterPath="$PROJECT_DIR$/../Client/out/production/Helper/packet/RevertPacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Helper/packet/UpdatePacket.class" afterPath="$PROJECT_DIR$/../Client/out/production/Helper/packet/UpdatePacket.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/out/production/Helper/utils/Helper.class" afterPath="$PROJECT_DIR$/../Client/out/production/Helper/utils/Helper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Helper/packet/AddPacket.class" afterPath="$PROJECT_DIR$/out/production/Helper/packet/AddPacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Helper/packet/ClonePacket.class" afterPath="$PROJECT_DIR$/out/production/Helper/packet/ClonePacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Helper/packet/CommitPacket.class" afterPath="$PROJECT_DIR$/out/production/Helper/packet/CommitPacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Helper/packet/ErrorPacket.class" afterPath="$PROJECT_DIR$/out/production/Helper/packet/ErrorPacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Helper/packet/IPacket.class" afterPath="$PROJECT_DIR$/out/production/Helper/packet/IPacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Helper/packet/LogPacket.class" afterPath="$PROJECT_DIR$/out/production/Helper/packet/LogPacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Helper/packet/RevertPacket.class" afterPath="$PROJECT_DIR$/out/production/Helper/packet/RevertPacket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Helper/packet/UpdatePacket.class" afterPath="$PROJECT_DIR$/out/production/Helper/packet/UpdatePacket.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Helper/utils/Helper.class" afterPath="$PROJECT_DIR$/out/production/Helper/utils/Helper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/commands/Add.class" afterPath="$PROJECT_DIR$/out/production/Server/commands/Add.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/commands/Clone.class" afterPath="$PROJECT_DIR$/out/production/Server/commands/Clone.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/commands/Commit.class" afterPath="$PROJECT_DIR$/out/production/Server/commands/Commit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/commands/Error.class" afterPath="$PROJECT_DIR$/out/production/Server/commands/Error.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/commands/ICommand.class" afterPath="$PROJECT_DIR$/out/production/Server/commands/ICommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/dataProvider/IConfig.class" afterPath="$PROJECT_DIR$/out/production/Server/dataProvider/IConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/commands/Log.class" afterPath="$PROJECT_DIR$/out/production/Server/commands/Log.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/commands/Revert.class" afterPath="$PROJECT_DIR$/out/production/Server/commands/Revert.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/commands/Update.class" afterPath="$PROJECT_DIR$/out/production/Server/commands/Update.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/dataProvider/FolderProvider.class" afterPath="$PROJECT_DIR$/out/production/Server/dataProvider/FolderProvider.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/dataProvider/IDataProvider$ProviderException.class" afterPath="$PROJECT_DIR$/out/production/Server/dataProvider/IDataProvider$ProviderException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/dataProvider/RepConfig.class" afterPath="$PROJECT_DIR$/out/production/Server/dataProvider/RepConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/dataProvider/VerConfig.class" afterPath="$PROJECT_DIR$/out/production/Server/dataProvider/VerConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/dataProvider/IDataProvider.class" afterPath="$PROJECT_DIR$/out/production/Server/dataProvider/IDataProvider.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/main/Main.class" afterPath="$PROJECT_DIR$/out/production/Server/main/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/threadDispatcher/ClientWorker.class" afterPath="$PROJECT_DIR$/out/production/Server/threadDispatcher/ClientWorker.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/threadDispatcher/ThreadDispatcher.class" afterPath="$PROJECT_DIR$/out/production/Server/threadDispatcher/ThreadDispatcher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Client/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/.idea/modules.xml" afterPath="$PROJECT_DIR$/../Client/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/src/client/Client.java" afterPath="$PROJECT_DIR$/../Client/src/client/Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/src/commands/Add.java" afterPath="$PROJECT_DIR$/../Client/src/commands/Add.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/src/commands/Clone.java" afterPath="$PROJECT_DIR$/../Client/src/commands/Clone.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/src/commands/Commit.java" afterPath="$PROJECT_DIR$/../Client/src/commands/Commit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/src/commands/Error.java" afterPath="$PROJECT_DIR$/../Client/src/commands/Error.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/src/commands/ICommand.java" afterPath="$PROJECT_DIR$/../Client/src/commands/ICommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/src/commands/Log.java" afterPath="$PROJECT_DIR$/../Client/src/commands/Log.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/src/commands/Revert.java" afterPath="$PROJECT_DIR$/../Client/src/commands/Revert.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/src/commands/Update.java" afterPath="$PROJECT_DIR$/../Client/src/commands/Update.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/src/parser/CommandParser.java" afterPath="$PROJECT_DIR$/../Client/src/parser/CommandParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Helper/src/packet/AddPacket.java" afterPath="$PROJECT_DIR$/../Helper/src/packet/AddPacket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Helper/src/packet/ClonePacket.java" afterPath="$PROJECT_DIR$/../Helper/src/packet/ClonePacket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Helper/src/packet/CommitPacket.java" afterPath="$PROJECT_DIR$/../Helper/src/packet/CommitPacket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Helper/src/packet/ErrorPacket.java" afterPath="$PROJECT_DIR$/../Helper/src/packet/ErrorPacket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Helper/src/packet/IPacket.java" afterPath="$PROJECT_DIR$/../Helper/src/packet/IPacket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Helper/src/packet/LogPacket.java" afterPath="$PROJECT_DIR$/../Helper/src/packet/LogPacket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Helper/src/packet/RevertPacket.java" afterPath="$PROJECT_DIR$/../Helper/src/packet/RevertPacket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Helper/src/packet/UpdatePacket.java" afterPath="$PROJECT_DIR$/../Helper/src/packet/UpdatePacket.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Helper/src/utils/Helper.java" afterPath="$PROJECT_DIR$/../Helper/src/utils/Helper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/commands/Add.java" afterPath="$PROJECT_DIR$/src/commands/Add.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/commands/Clone.java" afterPath="$PROJECT_DIR$/src/commands/Clone.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/commands/Commit.java" afterPath="$PROJECT_DIR$/src/commands/Commit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/commands/Error.java" afterPath="$PROJECT_DIR$/src/commands/Error.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/commands/ICommand.java" afterPath="$PROJECT_DIR$/src/commands/ICommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dataProvider/IConfig.java" afterPath="$PROJECT_DIR$/src/dataProvider/IConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/commands/Log.java" afterPath="$PROJECT_DIR$/src/commands/Log.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/commands/Revert.java" afterPath="$PROJECT_DIR$/src/commands/Revert.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/commands/Update.java" afterPath="$PROJECT_DIR$/src/commands/Update.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dataProvider/FolderProvider.java" afterPath="$PROJECT_DIR$/src/dataProvider/FolderProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dataProvider/IDataProvider.java" afterPath="$PROJECT_DIR$/src/dataProvider/IDataProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dataProvider/RepConfig.java" afterPath="$PROJECT_DIR$/src/dataProvider/RepConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dataProvider/VerConfig.java" afterPath="$PROJECT_DIR$/src/dataProvider/VerConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threadDispatcher/ClientWorker.java" afterPath="$PROJECT_DIR$/src/threadDispatcher/ClientWorker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threadDispatcher/ThreadDispatcher.java" afterPath="$PROJECT_DIR$/src/threadDispatcher/ThreadDispatcher.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,18 +171,100 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="230">
+              <caret line="43" column="23" lean-forward="false" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientWorker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/threadDispatcher/ClientWorker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThreadDispatcher.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/threadDispatcher/ThreadDispatcher.java">
+      <file leaf-file-name="ThreadedTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/threadDispatcher/ThreadedTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+            <state relative-caret-position="170">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dataProvider/IConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ICommand.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/commands/ICommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pair.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/javafx-src.zip!/javafx/util/Pair.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="56" column="25" lean-forward="false" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Update.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/commands/Update.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/commandFactory/UserConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FolderProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dataProvider/FolderProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Helper/src/utils/Helper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,16 +309,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/PipPacket.java" />
-        <option value="$PROJECT_DIR$/src/serialization/SerializationException.java" />
-        <option value="$PROJECT_DIR$/Task3.txt" />
-        <option value="$PROJECT_DIR$/Task.txt" />
-        <option value="$PROJECT_DIR$/src/main/ClassToPropertiesConverter.java" />
-        <option value="$PROJECT_DIR$/src/packet/FilePacket.java" />
-        <option value="$PROJECT_DIR$/src/versionSystem/StandardVersion.java" />
-        <option value="$PROJECT_DIR$/src/dataProvider/RepositotyConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/dataProvider/RepositoryConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/packet/ErrorPacket.java" />
         <option value="$PROJECT_DIR$/src/dataManager/DataManager.java" />
         <option value="$PROJECT_DIR$/src/dataProvider/RepConfiguration.java" />
         <option value="$PROJECT_DIR$/src/dataProvider/VersionFiles.java" />
@@ -152,14 +316,8 @@
         <option value="$PROJECT_DIR$/src/packet/StandardPacket.java" />
         <option value="$PROJECT_DIR$/src/packet/LogPacket.java" />
         <option value="$PROJECT_DIR$/src/utils/WorkWithSocket.java" />
-        <option value="$PROJECT_DIR$/src/commands/Log.java" />
         <option value="$PROJECT_DIR$/src/packet/RevertPacket.java" />
         <option value="$PROJECT_DIR$/src/commandFactory/CommandFactory.java" />
-        <option value="$PROJECT_DIR$/src/commands/Add.java" />
-        <option value="$PROJECT_DIR$/src/commands/Clone.java" />
-        <option value="$PROJECT_DIR$/src/commands/Revert.java" />
-        <option value="$PROJECT_DIR$/src/commands/Update.java" />
-        <option value="$PROJECT_DIR$/src/commands/Commit.java" />
         <option value="$PROJECT_DIR$/src/logger/Logger.java" />
         <option value="$PROJECT_DIR$/src/packet/AddPacket.java" />
         <option value="$PROJECT_DIR$/src/packet/ClonePacket.java" />
@@ -167,25 +325,41 @@
         <option value="$PROJECT_DIR$/src/packet/UpdatePacket.java" />
         <option value="$PROJECT_DIR$/src/commandFactory/UserConfig.java" />
         <option value="$PROJECT_DIR$/src/threadDispatcher/ThreadedTask.java" />
-        <option value="$PROJECT_DIR$/src/threadDispatcher/ThreadMonitor.java" />
         <option value="$PROJECT_DIR$/src/serialization/Serialization.java" />
         <option value="$PROJECT_DIR$/src/utils/Helper.java" />
-        <option value="$PROJECT_DIR$/src/dataProvider/FolderProvider.java" />
         <option value="$PROJECT_DIR$/users.conf" />
-        <option value="$PROJECT_DIR$/src/commands/Error.java" />
         <option value="$PROJECT_DIR$/repositories/pisos/pisos.log" />
-        <option value="$PROJECT_DIR$/repositories/pisos/pisos.conf" />
         <option value="$PROJECT_DIR$/../Helper/src/packet/FilePacket.java" />
         <option value="$PROJECT_DIR$/repositories/pisos/1.2/version.conf" />
-        <option value="$PROJECT_DIR$/src/threadDispatcher/ClientWorker.java" />
         <option value="$PROJECT_DIR$/src/dataProvider/VerConfig.java" />
         <option value="$PROJECT_DIR$/src/dataProvider/RepConfig.java" />
-        <option value="$PROJECT_DIR$/src/dataProvider/IDataProvider.java" />
         <option value="$PROJECT_DIR$/src/dataProvider/IConfig.java" />
+        <option value="$PROJECT_DIR$/src/threadDispatcher/ThreadDispatcher.java" />
+        <option value="$PROJECT_DIR$/src/threadDispatcher/ThreadMonitor.java" />
+        <option value="$PROJECT_DIR$/repositories/test/1.1/version.conf" />
+        <option value="$PROJECT_DIR$/../Helper/src/serialization/Serialization.java" />
+        <option value="$PROJECT_DIR$/../Helper/src/packet/IPacket.java" />
+        <option value="$PROJECT_DIR$/../Helper/src/packet/AddPacket.java" />
+        <option value="$PROJECT_DIR$/../Helper/src/packet/ClonePacket.java" />
+        <option value="$PROJECT_DIR$/../Helper/src/packet/CommitPacket.java" />
+        <option value="$PROJECT_DIR$/../Helper/src/packet/ErrorPacket.java" />
+        <option value="$PROJECT_DIR$/../Helper/src/packet/LogPacket.java" />
+        <option value="$PROJECT_DIR$/../Helper/src/packet/RevertPacket.java" />
+        <option value="$PROJECT_DIR$/../Helper/src/packet/UpdatePacket.java" />
         <option value="$PROJECT_DIR$/src/commands/ICommand.java" />
+        <option value="$PROJECT_DIR$/src/commands/Clone.java" />
+        <option value="$PROJECT_DIR$/src/commands/Add.java" />
+        <option value="$PROJECT_DIR$/src/commands/Error.java" />
+        <option value="$PROJECT_DIR$/src/commands/Log.java" />
+        <option value="$PROJECT_DIR$/src/commands/Update.java" />
+        <option value="$PROJECT_DIR$/src/commands/Revert.java" />
+        <option value="$PROJECT_DIR$/src/dataProvider/IDataProvider.java" />
+        <option value="$PROJECT_DIR$/src/commands/Commit.java" />
+        <option value="$PROJECT_DIR$/src/threadDispatcher/ClientWorker.java" />
+        <option value="$PROJECT_DIR$/src/dataProvider/FolderProvider.java" />
         <option value="$PROJECT_DIR$/../Helper/src/utils/Helper.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/threadDispatcher/ThreadDispatcher.java" />
+        <option value="$PROJECT_DIR$/repositories/pisos/pisos.conf" />
       </list>
     </option>
   </component>
@@ -201,7 +375,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -222,12 +396,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
+            <path>
+              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Helper" type="462c0819:PsiDirectoryNode" />
+            </path>
             <path>
               <item name="Server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Server" type="462c0819:PsiDirectoryNode" />
@@ -237,18 +412,45 @@
               <item name="Server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dataProvider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="threadDispatcher" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Client" />
@@ -417,11 +619,16 @@
       <workItem from="1525982966487" duration="95042000" />
       <workItem from="1526242968161" duration="10875000" />
       <workItem from="1526294751676" duration="17124000" />
+      <workItem from="1526575163436" duration="1520000" />
+      <workItem from="1526638593401" duration="1808000" />
+      <workItem from="1526728554196" duration="971000" />
+      <workItem from="1527158391337" duration="1662000" />
+      <workItem from="1527184159537" duration="18826000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202376000" />
+    <option name="totallyTimeSpent" value="227163000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -433,7 +640,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -441,21 +648,21 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27659574" sideWeight="0.5060514" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5030257" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27659574" sideWeight="0.49394855" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28968903" sideWeight="0.49092284" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28968903" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22012103" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23298033" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28805238" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3535188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -477,50 +684,97 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="86" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/threadDispatcher/ClientWorker.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="95" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/packet/UpdatePacket.java" />
-    <entry file="file://$PROJECT_DIR$/src/packet/LogPacket.java" />
-    <entry file="file://$PROJECT_DIR$/repositories/pisos/1.4/version.conf" />
-    <entry file="file://$PROJECT_DIR$/repositories/pisa/pisa.log" />
-    <entry file="file://$PROJECT_DIR$/src/serialization/serialization.iml" />
-    <entry file="file://$PROJECT_DIR$/src/serialization/Serialization.java" />
-    <entry file="file://$PROJECT_DIR$/Server.iml">
+    <entry file="file://$PROJECT_DIR$/../Helper/src/serialization/Serialization.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="4437">
+          <caret line="261" column="65" lean-forward="false" selection-start-line="261" selection-start-column="65" selection-end-line="261" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Helper.java" />
-    <entry file="file://$PROJECT_DIR$/users.conf">
+    <entry file="file://$PROJECT_DIR$/src/commands/Clone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repositories/hello/1.0/version.conf">
+    <entry file="file://$PROJECT_DIR$/src/threadDispatcher/ClientWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../utils/src/commandFactory/CommandFactory.java" />
-    <entry file="file://$PROJECT_DIR$/repositories/pisos/pisos.log">
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataProvider/RepConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataProvider/FolderProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/commands/Add.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/IPacket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/ClonePacket.java">
+    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/ErrorPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/FilePacket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -528,42 +782,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/FilePacket.java">
+    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/LogPacket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="20" />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Helper/src/fileWorker/IExecutable.java">
+    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/RevertPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding>
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#562#563#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/UpdatePacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Helper/src/serialization/Serialization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4318">
+          <caret line="261" column="65" lean-forward="false" selection-start-line="261" selection-start-column="65" selection-end-line="261" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/commandFactory/CommandFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/rt.jar!/jdk/xml/internal/JdkXmlUtils.class">
+    <entry file="file://$PROJECT_DIR$/src/commands/Add.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/rt.jar!/jdk/xml/internal/SecuritySupport.class">
+    <entry file="file://$PROJECT_DIR$/src/commands/Clone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repositories/pisos/1.2/version.conf">
+    <entry file="file://$PROJECT_DIR$/src/dataProvider/RepConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/threadDispatcher/ThreadDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/threadDispatcher/ThreadMonitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/commands/Error.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="80" lean-forward="false" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/commands/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="34" column="89" lean-forward="false" selection-start-line="34" selection-start-column="89" selection-end-line="34" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/commands/Revert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataProvider/IDataProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="46" lean-forward="false" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataProvider/VerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <element signature="e#163#164#0" expanded="false" />
+            <element signature="e#209#210#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/AddPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/ClonePacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -571,7 +953,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repositories/pisos/1.1/version.conf">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/org/xml/sax/helpers/DefaultHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repositories/pisos/1.0/version.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/CommitPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#610#611#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/commands/Commit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repositories/pisos/pisos.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -587,178 +1003,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/webServer/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/versionSystem/StandardVersion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/versionSystem/IVersionSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/threadDispatcher/ThreadMonitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="230">
+          <caret line="43" column="23" lean-forward="false" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
           <folding>
-            <marker date="1526242646043" expanded="true" signature="693:699" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/threadDispatcher/ThreadedTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/threadDispatcher/ClientWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logger/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logger/ILogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataProvider/VerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="e#163#164#0" expanded="true" />
-            <element signature="e#209#210#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataProvider/RepConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataProvider/IDataProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding>
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataProvider/IConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dataProvider/FolderProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-799">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/commands/Update.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/javafx-src.zip!/javafx/util/Pair.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/commands/Revert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/commands/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/commands/ICommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="48" lean-forward="false" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/commands/Error.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="5" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/commands/Commit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/commands/Clone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/commands/Add.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="56" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="56" />
+        <state relative-caret-position="128">
+          <caret line="56" column="25" lean-forward="false" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -771,74 +1037,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/commandFactory/CommandFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/commands/Update.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Helper/src/fileWorker/FileWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="29" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/AddPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/CommitPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Helper/src/packet/ErrorPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Helper/src/serialization/Serialization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="305">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Helper/src/utils/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+        <state relative-caret-position="255">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/threadDispatcher/ClientWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/threadDispatcher/ThreadedTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/threadDispatcher/ThreadDispatcher.java">
+    <entry file="file://$PROJECT_DIR$/src/dataProvider/IConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+        <state relative-caret-position="34">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/commands/ICommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -901,6 +1143,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

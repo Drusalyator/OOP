@@ -2,11 +2,11 @@ package commands;
 
 import commandFactory.UserConfig;
 import dataProvider.IDataProvider;
+import javafx.util.Pair;
 import logger.ILogger;
 import logger.Logger;
 import packet.ClonePacket;
 import packet.ErrorPacket;
-import packet.FilePacket;
 import packet.IPacket;
 import utils.Helper;
 
@@ -22,19 +22,23 @@ public class Clone implements ICommand {
     }
 
     @Override
-    public IPacket execute(IDataProvider dataProvider) {
-        if (clonePacket == null) return new ErrorPacket(1, "BED. Received a bad package");
+    public Pair<IPacket, byte[]> execute(IDataProvider dataProvider, byte[] data) {
+        if (clonePacket == null) return new Pair<>(new ErrorPacket(1, "BED. Received a bad package"), null);
         try {
             File[] files = dataProvider.getActualVersion(clonePacket.getRepoName());
-            FilePacket[] filePackets = Helper.getFilePacket(files);
+            byte[] archive = Helper.makeArchive(files);
+
             UserConfig userConfig = UserConfig.getInstance();
             userConfig.addNewUsers(clonePacket.getUserName(), clonePacket.getRepoName());
+
             ILogger logger = new Logger(clonePacket.getRepoName());
             logger.writeNewLog(clonePacket.getUserName() + ": clone");
-            return new ClonePacket(clonePacket.getUserName(), clonePacket.getPath(),
-                    clonePacket.getRepoName(), clonePacket.getFlag(), filePackets);
+
+            return new Pair<>(new ClonePacket(clonePacket.getUserName(), clonePacket.getPath(),
+                    clonePacket.getRepoName(), clonePacket.getFlag(), archive.length), archive);
         } catch (Exception exception) {
-            return new ErrorPacket(3, "Cannot execute command clone" + exception.getLocalizedMessage());
+            return new Pair<>(new ErrorPacket(
+                    3, "Cannot execute command clone" + exception.getLocalizedMessage()), null);
         }
     }
 }

@@ -3,21 +3,22 @@ package packet;
 public class UpdatePacket implements IPacket {
 
     private String userName;
-    private FilePacket[] files;
+    private int dataLength;
 
     public UpdatePacket() {
     }
 
-    public UpdatePacket(String userName, FilePacket[] files) {
+    public UpdatePacket(String userName, int dataLength) {
         this.userName = userName;
-        this.files = files;
+        this.dataLength = dataLength;
     }
 
     public String getUserName() {
         return userName;
     }
 
-    public FilePacket[] getFiles() {
-        return files;
+    @Override
+    public int getDataLength() {
+        return dataLength;
     }
 }

@@ -1,7 +1,8 @@
 package dataProvider;
 
-import packet.FilePacket;
+import com.sun.org.apache.xml.internal.security.utils.HelperNodeList;
 import serialization.Serialization;
+import utils.Helper;
 import versionSystem.IVersionSystem;
 
 import java.io.*;
@@ -29,20 +30,22 @@ public class FolderProvider implements IDataProvider {
         } else throw new ProviderException("Could not created repository");
     }
 
-    public void addNewVersion(String repName, FilePacket[] files, String[] actualFiles) throws ProviderException {
+    public void addNewVersion(String repName, byte[] files, String[] actualFiles) throws ProviderException {
         String pathToRepConfig = "repositories//" + repName + String.format("//%s.conf", repName);
         RepConfig repConfig = (RepConfig) readConfig(pathToRepConfig);
         double nextVersion = repConfig.getVersionSystem().getNextVersion(repConfig.actualVersion);
 
         String pathToVersion = "repositories//" + repName + "//" + nextVersion;
         File newVersion = new File(pathToVersion);
+        newVersion.delete();
 
         if (newVersion.mkdir()) {
             try {
-                for (FilePacket file : files) {
+                Map<String, byte[]> filesData = Helper.readArchive(files);
+                for (Map.Entry<String, byte[]> file : filesData.entrySet()) {
                     FileOutputStream fileOutputStream =
-                            new FileOutputStream(pathToVersion + "//" + file.getFileName());
-                    fileOutputStream.write(file.getFileData());
+                            new FileOutputStream(pathToVersion + "//" + file.getKey());
+                    fileOutputStream.write(file.getValue());
                     fileOutputStream.close();
                 }
 

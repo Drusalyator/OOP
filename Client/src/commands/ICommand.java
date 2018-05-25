@@ -2,5 +2,5 @@ package commands;
 
 public interface ICommand {
 
-    void execute();
+    void execute(byte[] data);
 }

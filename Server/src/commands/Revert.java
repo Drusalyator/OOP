@@ -2,10 +2,10 @@ package commands;
 
 import commandFactory.UserConfig;
 import dataProvider.IDataProvider;
+import javafx.util.Pair;
 import logger.ILogger;
 import logger.Logger;
 import packet.ErrorPacket;
-import packet.FilePacket;
 import packet.IPacket;
 import packet.RevertPacket;
 import utils.Helper;
@@ -22,8 +22,8 @@ public class Revert implements ICommand {
     }
 
     @Override
-    public IPacket execute(IDataProvider dataProvider) {
-        if (revertPacket == null) return new ErrorPacket(1, "BED. Received a bad package");
+    public Pair<IPacket, byte[]> execute(IDataProvider dataProvider, byte[] data) {
+        if (revertPacket == null) return new Pair<>(new ErrorPacket(1, "BED. Received a bad package"), null);
         UserConfig userConfig = UserConfig.getInstance();
         String userRep = userConfig.getUserRepository(revertPacket.getUserName());
         if (userConfig.getUserRepository(revertPacket.getUserName()) != null) {
@@ -31,20 +31,21 @@ public class Revert implements ICommand {
                 ILogger logger = new Logger(userRep);
                 if (revertPacket.getVersion() != null) {
                     File[] files = dataProvider.getNeededVersion(userRep, revertPacket.getVersion());
-                    FilePacket[] filePackets = Helper.getFilePacket(files);
+                    byte[] fileData = Helper.makeArchive(files);
                     logger.writeNewLog(revertPacket.getUserName() + ": revert " + revertPacket.getVersion());
-                    return new RevertPacket(revertPacket.getUserName(), revertPacket.getVersion(),
-                            revertPacket.getFlag(), filePackets);
+                    return new Pair<>(new RevertPacket(revertPacket.getUserName(), revertPacket.getVersion(),
+                            revertPacket.getFlag(), fileData.length), fileData);
                 } else {
                     File[] files = dataProvider.getActualVersion(userRep);
-                    FilePacket[] filePackets = Helper.getFilePacket(files);
+                    byte[] fileData = Helper.makeArchive(files);
                     logger.writeNewLog(revertPacket.getUserName() + ": revert");
-                    return new RevertPacket(revertPacket.getUserName(), revertPacket.getVersion(),
-                            revertPacket.getFlag(), filePackets);
+                    return new Pair<>(new RevertPacket(revertPacket.getUserName(), revertPacket.getVersion(),
+                            revertPacket.getFlag(), fileData.length), fileData);
                 }
             } catch (Exception exception) {
-                return new ErrorPacket(16, "Cannot execute command 'Revert': " + exception.getLocalizedMessage());
+                return new Pair<>(new ErrorPacket
+                        (16, "Cannot execute command 'Revert': " + exception.getLocalizedMessage()), null);
             }
-        } else return new ErrorPacket(5, "Make command clone at first");
+        } else return new Pair<>(new ErrorPacket(5, "Make command clone at first"), null);
     }
 }

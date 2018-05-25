@@ -2,6 +2,7 @@ package parser;
 
 import commandFactory.CommandFactory;
 import fileWorker.Md5Executor;
+import javafx.util.Pair;
 import packet.*;
 import utils.Helper;
 
@@ -13,24 +14,25 @@ import java.util.Properties;
 
 public class CommandParser {
 
-    public static IPacket parseCommand(String stringForParse, String userName) throws ParseError {
+    public static Pair<IPacket, byte[]> parseCommand(String stringForParse, String userName) throws ParseError {
         ArrayList<String> arguments = getFinishArguments(stringForParse);
         if (arguments.size() > 0) {
             switch (arguments.get(0)) {
                 case "add":
                     if (arguments.size() != 2) throw new ParseError("Incorrect command");
-                    else return new AddPacket(userName, arguments.get(1));
+                    else return new Pair<>(new AddPacket(userName, arguments.get(1)), null);
                 case "clone":
                     if (arguments.size() > 4 || arguments.size() < 3) throw new ParseError("Incorrect command");
                     if (arguments.size() == 3)
-                        return new ClonePacket(userName, arguments.get(1), arguments.get(2), null, null);
+                        return new Pair<>(new ClonePacket(userName, arguments.get(1), arguments.get(2), null, 0), null);
                     else {
                         if (!Objects.equals(arguments.get(3), ".")) throw new ParseError("Unsupported flag");
-                        return new ClonePacket(userName, arguments.get(1), arguments.get(2), arguments.get(3), null);
+                        return new Pair<>(new ClonePacket
+                                (userName, arguments.get(1), arguments.get(2), arguments.get(3), 0), null);
                     }
                 case "update":
                     if (arguments.size() > 1) throw new ParseError("Incorrect command");
-                    else return new UpdatePacket(userName, null);
+                    else return new Pair<>(new UpdatePacket(userName, 0), null);
                 case "commit":
                     if (arguments.size() > 1) throw new ParseError("Incorrect command");
                     else return makeCommitPacket(userName);
@@ -43,27 +45,27 @@ public class CommandParser {
                         } catch (IOException exception) {
                             throw new ParseError("Cannot load config files");
                         }
-                        return new ClonePacket(userName, userConfig.getProperty("LocalRep"),
-                                userConfig.getProperty("ServerRep"), ".", null);
+                        return new Pair<>(new ClonePacket(userName, userConfig.getProperty("LocalRep"),
+                                userConfig.getProperty("ServerRep"), ".", 0), null);
                     }
                     else if (arguments.size() == 2)
                         try {
                             Double.parseDouble(arguments.get(1));
-                            return new RevertPacket(userName, arguments.get(1), null, null);
+                            return new Pair<>(new RevertPacket(userName, arguments.get(1), null, 0), null);
                         } catch (Exception exception) {
                             throw new ParseError("Incorrect command");
                         }
-                    else return new RevertPacket(userName, arguments.get(1), arguments.get(2), null);
+                    else return new Pair<>(new RevertPacket(userName, arguments.get(1), arguments.get(2), 0), null);
                 case "log":
                     if (arguments.size() > 1) throw new ParseError("Incorrect command");
-                    else return new LogPacket(userName, null);
+                    else return new Pair<>(new LogPacket(userName, null), null);
                 default:
                     throw new ParseError("Incorrect command");
             }
         } else throw new ParseError("Incorrect command");
     }
 
-    private static CommitPacket makeCommitPacket(String userName) throws ParseError {
+    private static Pair<IPacket, byte[]> makeCommitPacket(String userName) throws ParseError {
         Properties userConfig;
         try {
             userConfig = CommandFactory.loadConfigFile("user.conf");
@@ -84,29 +86,34 @@ public class CommandParser {
 
         File userRep = new File(localRep);
         File[] actualFile = userRep.listFiles((dir, name) -> !Objects.equals(name, "rep.conf"));
+
         if (actualFile == null) throw new ParseError("No changes");
+
         Md5Executor executor = new Md5Executor();
+
         for (File file: actualFile) {
             String hash = executor.process(file);
             if (repConfig.getProperty(file.getName(), null) == null ||
                     !Objects.equals(hash, repConfig.getProperty(file.getName(), null))) {
                 filesToSend.add(file);
+                repConfig.setProperty(file.getName(), hash);
             }
         }
 
-        FilePacket[] toSend;
+        CommandFactory.storeConfigFile(repConfig, localRep + "//rep.conf");
+
+        byte[] toSend;
         try {
-            toSend = Helper.getFilePacket(filesToSend.toArray(new File[filesToSend.size()]));
+            toSend = Helper.makeArchive(filesToSend.toArray(new File[filesToSend.size()]));
         } catch (IOException exception) {
             throw new ParseError("Cannot collect files");
         }
 
-        if (toSend == null) toSend = new FilePacket[0];
 
         String[] actFiles = userRep.list((dir, name) -> !Objects.equals(name, "rep.conf"));
         if (actFiles == null) actFiles = new String[0];
 
-        return new CommitPacket(userName, toSend, actFiles);
+        return new Pair<>(new CommitPacket(userName, toSend.length, actFiles), toSend);
     }
 
     private static ArrayList<String> getFinishArguments(String string) {

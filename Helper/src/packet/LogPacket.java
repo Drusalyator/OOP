@@ -20,4 +20,9 @@ public class LogPacket implements IPacket{
     public String getLog() {
         return log;
     }
+
+    @Override
+    public int getDataLength() {
+        return 0;
+    }
 }

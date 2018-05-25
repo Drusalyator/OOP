@@ -2,6 +2,7 @@ package client;
 
 import commandFactory.CommandFactory;
 import commands.ICommand;
+import javafx.util.Pair;
 import packet.IPacket;
 import parser.CommandParser;
 import serialization.Serialization;
@@ -39,10 +40,11 @@ public class Client {
             while (work) {
                 try {
                     System.out.print(" > Type your commands: ");
-                    IPacket packet;
+                    Pair<IPacket, byte[]> request;
                     command = keyboardReader.readLine();
                     try {
-                        packet = CommandParser.parseCommand(command, userName);
+                        System.out.println("      Data preparation...");
+                        request = CommandParser.parseCommand(command, userName);
                     } catch (CommandParser.ParseError exception) {
                         System.out.println(" > " + exception.getMessage());
                         continue;
@@ -51,12 +53,15 @@ public class Client {
                     DataInputStream inputStream = new DataInputStream(socket.getInputStream());
                     DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
 
-                    Helper.sendResponse(socket, packet);
-                    IPacket response = Helper.getRequest(socket);
+                    System.out.println("      Sending request...");
+                    Helper.sendResponse(socket, request);
+                    System.out.println("      Getting request...");
+                    Pair<IPacket, byte[]> response = Helper.getRequest(socket);
 
                     if (response != null) {
-                        ICommand responseCommand = CommandFactory.createCommand(response);
-                        responseCommand.execute();
+                        System.out.println("      Executing...");
+                        ICommand responseCommand = CommandFactory.createCommand(response.getKey());
+                        responseCommand.execute(response.getValue());
                     } else System.out.println(" > Response was not get");
 
                     inputStream.close();

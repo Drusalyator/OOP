@@ -20,4 +20,9 @@ public class AddPacket implements IPacket {
     public String getRepositoryName() {
         return repositoryName;
     }
+
+    @Override
+    public int getDataLength() {
+        return 0;
+    }
 }

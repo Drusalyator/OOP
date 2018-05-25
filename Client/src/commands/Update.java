@@ -1,14 +1,13 @@
 package commands;
 
 import commandFactory.CommandFactory;
-import packet.FilePacket;
 import packet.IPacket;
 import packet.UpdatePacket;
-import parser.CommandParser;
+import utils.Helper;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Objects;
+import java.util.Map;
 import java.util.Properties;
 
 public class Update implements ICommand{
@@ -21,35 +20,35 @@ public class Update implements ICommand{
     }
 
     @Override
-    public void execute() {
-        FilePacket[] files = updatePacket.getFiles();
-        if (files == null)
-            System.out.println("No getting file");
-        else {
-            Properties userConfig;
-            Properties repConfig;
-            try {
-                userConfig = CommandFactory.loadConfigFile("user.conf");
-                repConfig = CommandFactory.loadConfigFile(userConfig.getProperty("LocalRep") + "//rep.conf");
-            } catch (IOException exception) {
-                System.out.println(" > Cannot load config files");
-                return;
-            }
+    public void execute(byte[] data) {
+        try {
+            Map<String, byte[]> fileData = Helper.readArchive(data);
+            if (fileData.size() == 0)
+                System.out.println("No getting file");
+            else {
+                Properties userConfig;
+                Properties repConfig;
+                try {
+                    userConfig = CommandFactory.loadConfigFile("user.conf");
+                    repConfig = CommandFactory.loadConfigFile(userConfig.getProperty("LocalRep") + "//rep.conf");
+                } catch (IOException exception) {
+                    System.out.println(" > Cannot load config files");
+                    return;
+                }
 
-            for (FilePacket file : files) {
-                if (repConfig.getProperty(file.getFileName()) == null ||
-                        file.getHash() == null ||
-                        !Objects.equals(repConfig.getProperty(file.getFileName()), file.getHash())) {
+                for (Map.Entry<String, byte[]> file : fileData.entrySet()) {
                     try {
                         FileOutputStream fileOutputStream =
-                                new FileOutputStream(userConfig.getProperty("LocalRep") + "//" + file.getFileName());
-                        fileOutputStream.write(file.getFileData());
+                                new FileOutputStream(userConfig.getProperty("LocalRep") + "//" + file.getKey());
+                        fileOutputStream.write(file.getValue());
                     } catch (IOException exception) {
-                        System.out.println(" > File : '" + file.getFileName() + "' was not write");
+                        System.out.println(" > File : '" + file.getKey() + "' was not write");
                     }
                 }
+                System.out.println(" > Files was update");
             }
-            System.out.println(" > Files was update");
+        } catch (IOException exception) {
+            System.out.println("Cannot execute command");
         }
     }
 }

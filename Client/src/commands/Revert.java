@@ -1,19 +1,17 @@
 package commands;
 
 import commandFactory.CommandFactory;
-import packet.FilePacket;
+import fileWorker.Md5Executor;
 import packet.IPacket;
 import packet.RevertPacket;
+import utils.Helper;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.Properties;
+import java.util.*;
 
-public class Revert implements ICommand{
+public class Revert implements ICommand {
 
     private RevertPacket revertPacket;
 
@@ -23,54 +21,66 @@ public class Revert implements ICommand{
     }
 
     @Override
-    public void execute() {
-        ArrayList<FilePacket> needToRevertFiles = new ArrayList<>();
-        Properties userConfig;
+    public void execute(byte[] data) {
         try {
-            userConfig = CommandFactory.loadConfigFile("user.conf");
-        } catch (IOException exception) {
-            System.out.println(" > Cannot load config files");
-            return;
-        }
-        File localRep = new File(userConfig.getProperty("LocalRep"));
-        if (revertPacket.getFlag() != null) {
-            switch (revertPacket.getFlag()) {
-                case "-hard":
-                    needToRevertFiles.addAll(Arrays.asList(revertPacket.getFiles()));
-                    break;
-                default: {
-                    System.out.println(" > Unsupported flag");
-                    return;
-                }
-            }
-        } else {
-            String[] fileInRepo = localRep.list((dir, name) -> !Objects.equals(name, "rep.conf"));
-            if (fileInRepo == null) {
-                System.out.println(" > No files in repository");
+            Map<String, byte[]> filesData = Helper.readArchive(data);
+            ArrayList<Map.Entry<String, byte[]>> needToRevertFiles = new ArrayList<>();
+            Properties userConfig;
+            try {
+                userConfig = CommandFactory.loadConfigFile("user.conf");
+            } catch (IOException exception) {
+                System.out.println(" > Cannot load config files");
                 return;
             }
-            for (FilePacket filePacket: revertPacket.getFiles()) {
-                boolean found = false;
-                for (String fileName: fileInRepo) {
-                    if (Objects.equals(filePacket.getFileName(), fileName)) {
-                        found = true;
+            File localRep = new File(userConfig.getProperty("LocalRep"));
+            if (revertPacket.getFlag() != null) {
+                switch (revertPacket.getFlag()) {
+                    case "-hard":
+                        needToRevertFiles.addAll(filesData.entrySet());
                         break;
+                    default: {
+                        System.out.println(" > Unsupported flag");
+                        return;
                     }
                 }
-                if (found) needToRevertFiles.add(filePacket);
+            } else {
+                String[] fileInRepo = localRep.list((dir, name) -> !Objects.equals(name, "rep.conf"));
+                if (fileInRepo == null) {
+                    System.out.println(" > No files in repository");
+                    return;
+                }
+                for (Map.Entry<String, byte[]> file : filesData.entrySet()) {
+                    boolean found = false;
+                    for (String fileName : fileInRepo) {
+                        if (Objects.equals(file.getKey(), fileName)) {
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (found) needToRevertFiles.add(file);
+                }
             }
-        }
-        for (FilePacket filePacket: needToRevertFiles) {
-            try {
-                FileOutputStream fileOutputStream =
-                        new FileOutputStream(userConfig.getProperty("LocalRep") + "//" + filePacket.getFileName());
-                fileOutputStream.write(filePacket.getFileData());
-            } catch (IOException exception) {
-                System.out.println(" > File : '" + filePacket.getFileName() + "' was not write");
-            }
-        }
-        System.out.println(" > Revert to version: " + revertPacket.getVersion() + " with flag: " + revertPacket.getFlag());
 
+            Md5Executor md5Executor = new Md5Executor();
+            Properties repConfig = CommandFactory.loadConfigFile(localRep + "//rep.conf");
+
+            for (Map.Entry<String, byte[]> file : needToRevertFiles) {
+                try {
+                    String path = userConfig.getProperty("LocalRep") + "//" + file.getKey();
+                    FileOutputStream fileOutputStream = new FileOutputStream(path);
+                    fileOutputStream.write(file.getValue());
+                    String hash = md5Executor.process(new File(path));
+                    repConfig.setProperty(file.getKey(), hash);
+                } catch (IOException exception) {
+                    System.out.println(" > File : '" + file.getKey() + "' was not write");
+                }
+            }
+            CommandFactory.storeConfigFile(repConfig, localRep + "//rep.conf");
+            System.out.println(" > Revert to version: " + revertPacket.getVersion() + " with flag: " + revertPacket.getFlag());
+
+        } catch (IOException exception) {
+            System.out.println("Cannot execute command");
+        }
     }
 
 }
